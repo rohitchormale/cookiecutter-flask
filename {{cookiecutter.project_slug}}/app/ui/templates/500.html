@@ -1,0 +1,17 @@
+{% raw %}{% extends 'base.html' %}
+{% block title %}Something went wrong...{% endblock %}
+{% block content %}
+    <h1> Something went wrong...</h1>
+              {% with messages = get_flashed_messages() %}
+              {% if messages %}
+              {% for message in messages %}
+              <div class="alert alert-warning alert-dismissible">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                  {{ message }}
+              </div>
+              {% endfor %}
+              {% endif %}
+              {% endwith %}
+
+    <h2>Please try again after sometimes. If problem exists, feel free to contact support.</h2>
+{% endblock %}{% endraw %}
