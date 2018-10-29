@@ -8,6 +8,8 @@ App init module
 
 from flask import Flask, redirect, render_template
 from flask_wtf.csrf import CSRFProtect
+from flask_login import LoginManager
+from flask_sqlalchemy import SQLAlchemy
 
 
 # init flask app
@@ -15,6 +17,7 @@ app = Flask(__name__, instance_relative_config=True, template_folder="ui/templat
 app.config.from_object("config")
 app.config.from_pyfile("config.py")
 csrf = CSRFProtect(app)
+db = SQLAlchemy(app)
 
 
 # blueprint registrations
@@ -22,11 +25,15 @@ from app.user.routers import user_blueprint
 app.register_blueprint(user_blueprint)
 
 
+# create db
+db.create_all()
+
+
 # common routes to change easily in future
 @app.route("/")
 def home():
     """Handle root resource request"""
-    return redirect("/user/login")
+    return redirect("/user/home")
 
 
 @app.errorhandler(404)
