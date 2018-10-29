@@ -1,5 +1,6 @@
 """
-Collection of helpers functions and classes
+Collection of helper functions and classes
+
 
 @author: {{ cookiecutter.author }}
 """

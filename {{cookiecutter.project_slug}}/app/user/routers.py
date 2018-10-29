@@ -1,5 +1,5 @@
 """
-This module implements various blueprints and routers of User Extension
+This module implements various blueprints and routers of User extension
 
 
 @author: {{ cookiecutter.author }}

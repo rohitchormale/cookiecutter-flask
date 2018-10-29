@@ -1,6 +1,7 @@
 """
 App init module
 
+
 @author: {{ cookiecutter.author }}
 """
 
