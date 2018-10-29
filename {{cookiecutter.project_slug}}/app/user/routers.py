@@ -1,8 +1,8 @@
 """
-This module implements various blueprints and routers for different controllers related with authentication
+This module implements various blueprints and routers of User Extension
 
 
-@author: Rohit Chormale
+@author: {{ cookiecutter.author }}
 """
 
 

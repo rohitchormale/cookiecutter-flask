@@ -1,13 +1,18 @@
+"""
+App init module
+
+@author: {{ cookiecutter.author }}
+"""
+
+
 from flask import Flask, redirect, render_template
 from flask_wtf.csrf import CSRFProtect
-# from .helpers import JSONEncoder
 
 
 # init flask app
 app = Flask(__name__, instance_relative_config=True, template_folder="ui/templates", static_folder="ui/static")
 app.config.from_object("config")
 app.config.from_pyfile("config.py")
-# app.json_encoder = JSONEncoder
 csrf = CSRFProtect(app)
 
 
