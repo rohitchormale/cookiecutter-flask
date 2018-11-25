@@ -9,7 +9,7 @@ This module implements various models related with User extension
 from app import db
 
 
-class BaseModel(db.model):
+class BaseModel(db.Model):
     """
     Abstract model
     """
