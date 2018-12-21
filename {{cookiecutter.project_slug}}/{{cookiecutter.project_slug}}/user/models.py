@@ -5,20 +5,18 @@ This module implements various models related with User extension
 @author: {{ cookiecutter.author }}
 """
 
+from {{cookiecutter.project_slug}}.helpers import models
 
-from {{cookiecutter.project_slug}} import db
 
-
-class BaseModel(db.Model):
+class User(models.BaseModel):
     """
-    Abstract model
+    Sample user model
     """
 
-    __abstract__ = True
-
-    id = db.Column(db.Integer, primary_key=True)
-    date_created = db.Column(db.DateTime, default=db.func.current_timestamp())
-    date_modified = db.Column(db.DateTime, default=db.func.current_timestamp, onupdate=db.func.current_timestamp)
+    first_name = db.Column(db.String(32), nullable=False)
+    last_name = db.Column(db.String(32), nullable=False)
+    username = db.Column(db.String(32), nullable=False, unique=True)
+    password = db.Column(db.String(32), nullable=False)
 
 
 
