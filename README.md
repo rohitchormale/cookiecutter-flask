@@ -29,6 +29,11 @@
     > python manage.py
 
 
+## Bootstrapping
+
+- Once app is created, do NOT forget to change SECRET_KEY from `instance/config.py`
+
+
 ## References
 
 - [Flask](http://flask.pocoo.org)
