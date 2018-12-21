@@ -1,5 +1,5 @@
 """
-Collection of helper functions and classes
+Collection of helper functions and classes related with controllers.
 
 
 @author: {{ cookiecutter.author }}
