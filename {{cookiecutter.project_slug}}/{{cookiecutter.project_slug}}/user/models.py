@@ -6,7 +6,7 @@ This module implements various models related with User extension
 """
 
 
-from app import db
+from {{cookiecutter.project_slug}} import db
 
 
 class BaseModel(db.Model):
