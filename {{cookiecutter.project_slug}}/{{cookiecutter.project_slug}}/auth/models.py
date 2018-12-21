@@ -13,6 +13,8 @@ class User(models.BaseModel):
     Sample user model
     """
 
+    __tablename__ = "auth_user"
+
     first_name = db.Column(db.String(32), nullable=False)
     last_name = db.Column(db.String(32), nullable=False)
     username = db.Column(db.String(32), nullable=False, unique=True)
