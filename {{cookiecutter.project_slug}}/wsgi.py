@@ -7,4 +7,6 @@ wsgi application instance to deploy app behind apache/gunicorn/nginx
 import os, sys
 app_path = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, app_path)
-from {{cookiecutter.project_slug}} import app as application
+
+from {{cookiecutter.package_slug}} import create_app
+application = create_app()
