@@ -12,7 +12,7 @@ from flask_login import current_user, login_user, logout_user, login_required
 from flask_httpauth import HTTPBasicAuth
 from flask import current_app as app
 from {{ cookiecutter.package_slug }} import login_manager, db
-from {{ cookiecutter.package_slut }}.helpers.controllers import flash_errors
+from {{ cookiecutter.package_slug }}.helpers.controllers import flash_errors
 from .forms import LoginForm, RegisterForm
 from .models import User
 

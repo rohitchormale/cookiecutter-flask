@@ -12,7 +12,7 @@
 
 ### Method 1 from source
 
-    > git clone git@github.com:rohitchormale/flask-skeleton-cookiecutter.git
+    > git clone git@github.com:rohitchormale/cookiecutter-flask.git
     > cookiecutter <absolute-path-to-cloned-repo>
     project_slug [myproject]: /opt/fooproject (Enter new project name with proper path. If empty 'myproject' will be used with current directory)
     author[]: John Smith( Enter author name. If empty, empty string will be used)
@@ -22,7 +22,7 @@
 ### Method 2 using remote url
 
     > cd <directory-where-you-want-project>
-    > cookiecutter git@github.com:rohitchormale/flask-skeleton-cookiecutter.git
+    > cookiecutter git@github.com:rohitchormale/cookiecutter-flask.git
     project_slug [myproject]: /opt/fooproject (Enter new project name with proper path. If empty 'myproject' will be used with current directory)
     author[]: John Smith( Enter author name. If empty, empty string will be used)
     > cd <project-path>
