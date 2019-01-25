@@ -5,8 +5,8 @@ This module implements various models related with User extension
 @author: {{ cookiecutter.author }}
 """
 
-from {{cookiecutter.project_slug}} import db
-from {{cookiecutter.project_slug}}.helpers import models
+from {{cookiecutter.package_slug}} import db
+from {{cookiecutter.package_slug}}.helpers import models
 
 
 class User(models.BaseModel):
