@@ -9,7 +9,12 @@ This module implements various blueprints and routers of User extension
 from flask import Blueprint
 from .controllers import *
 
+# auth routes
+auth_blueprint = Blueprint("auth", "auth", url_prefix="/auth")
 
-user_blueprint = Blueprint("user", "user", url_prefix="/user")
-user_blueprint.add_url_rule("test", "test", test, methods=["GET",])
+
+# auth api routes
+auth_api_blueprint = Blueprint("auth_api", "auth_api", url_prefix="/api/auth")
+
+
 
