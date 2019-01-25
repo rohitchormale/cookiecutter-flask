@@ -17,7 +17,7 @@
     project_slug [myproject]: /opt/fooproject (Enter new project name with proper path. If empty 'myproject' will be used with current directory)
     author[]: John Smith( Enter author name. If empty, empty string will be used)
     > cd <project-path>
-    > python manage.py
+    > python develop.py
 
 ### Method 2 using remote url
 
@@ -26,7 +26,7 @@
     project_slug [myproject]: /opt/fooproject (Enter new project name with proper path. If empty 'myproject' will be used with current directory)
     author[]: John Smith( Enter author name. If empty, empty string will be used)
     > cd <project-path>
-    > python manage.py
+    > python develop.py
 
 
 ## Bootstrapping
