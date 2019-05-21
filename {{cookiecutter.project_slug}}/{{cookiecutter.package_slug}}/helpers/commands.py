@@ -14,4 +14,4 @@ helpers_cli = AppGroup("helpers")
 @click.option("name")
 def startapp(name):
     # TODO - implement command
-    pass
+    print("This command is not implemented yet")

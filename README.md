@@ -30,37 +30,54 @@
 
 
 ## Skeleton Structure
+   
 
-
-    myproject
-    ├── myproject
-    │   ├── auth
-    │   │   ├── controllers.py
-    │   │   ├── forms.py
-    │   │   ├── __init__.py
-    │   │   ├── models.py
-    │   │   └── routes.py
-    │   ├── helpers
-    │   │   ├── controllers.py
-    │   │   ├── __init__.py
-    │   │   └── models.py
-    │   ├── __init__.py
-    │   └── ui
-    │       └── templates
-    │           ├── 404.html
-    │           ├── 500.html
-    │           └── base.html
-    ├── tests
-    │   ├── auth
-    │   │   ├── __init__.py
-    │   │   └── test_controllers.py
-    │   └── __init__.py
-    ├── config.py
-    ├── instance
-    │   └── config.py
-    ├── wsgi.py
-    ├── README.md
-    └── requirements.txt
+     myproject
+     ├── myapp
+     │   ├── __init__.py
+     │   ├── extensions.py
+     │   │
+     │   ├── helpers
+     │   │   ├── __init__.py
+     │   │   ├── controllers.py
+     │   │   ├── models.py
+     │   │   └── commands.py
+     │   │
+     │   ├── auth
+     │   │   ├── __init__.py
+     │   │   ├── routes.py
+     │   │   ├── controllers.py
+     │   │   ├── models.py
+     │   │   ├── forms.py
+     │   │   └── commands.py
+     │   │
+     │   └── ui
+     │       ├── static
+     │       │   ├── css
+     │       │   │   └── styles.css
+     │       │   └── js
+     │       │       └── custom.js
+     │       │
+     │       └── templates
+     │           ├── 404.html
+     │           ├── 500.html
+     │           └── base.html
+     │
+     ├── tests
+     │   ├── __init__.py
+     │   ├── conftest.py
+     │   │   
+     │   └── auth
+     │       ├── __init__.py
+     │       └── test_controllers.py
+     │
+     ├── config.py
+     ├── instance
+     │   └── config.py
+     ├── wsgi.py
+     │
+     ├── requirements.txt
+     └── README.md 
 
 
 

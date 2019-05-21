@@ -10,7 +10,7 @@ from flask import Blueprint
 from .controllers import *
 
 # auth routes
-auth_blueprint = Blueprint("auth", "auth", url_prefix="/auth")
+auth_blueprint = Blueprint("auth", "auth", url_prefix="/auth", template_folder="auth")
 
 
 # auth api routes
