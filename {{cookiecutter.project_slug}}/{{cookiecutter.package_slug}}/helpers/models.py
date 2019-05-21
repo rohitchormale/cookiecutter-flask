@@ -6,7 +6,7 @@ Collection of helper functions and classes related with database models
 """
 
 
-from {{cookiecutter.package_slug}} import db
+from {{cookiecutter.package_slug}}.extensions import db
 
 
 class BaseModel(db.Model):

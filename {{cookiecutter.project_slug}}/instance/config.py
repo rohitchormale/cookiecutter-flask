@@ -1,5 +1,5 @@
 """
-Add variable config here. Do NOT commit this file in vcs.
+Add dynamic config here. Do NOT commit this file in vcs.
 """
 
 
@@ -7,39 +7,23 @@ import os
 BASE_DIR = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 
 
-#####################
-# Development Server
-####################
-
 DEBUG = True
-HOST = "0.0.0.0"
-PORT = 8080
+Testing = True
+SECRET_KEY = os.urandom(32) # same key will be used for csrf protection
 
 
-###########
-# Database
-###########
-
-SQLALCHEMY_DATABASE_URI = "sqlite:///{{cookiecutter.project_slug}}.sqlite3"
-# SQLALCHEMY_DATABASE_URI = "mysql:/user:passwd@127.0.0.1:3307/"
+# database
+SQLALCHEMY_TRACK_MODIFICATIONS = False
+SQLALCHEMY_DATABASE_URI = "sqlite:///%s/instance/{{ cookiecutter.project_slug }}.sqlite3" % BASE_DIR # sqlite
+# SQLALCHEMY_DATABASE_URI = "mysql://<username>:<password>@<host>/<database>" # mysql/mariadb
 
 
-###########
-# Logging
-##########
-
+# logging
 import logging
-LOG_FILE = os.path.join(BASE_DIR, "log", "{{cookiecutter.project_slug}}.log")
+LOG_FILE = "/tmp/{{ cookiecutter.project_slug }}.log"
 LOG_SIZE = 1024*1024
 LOG_LEVEL = logging.DEBUG
 
-
-########
-# Auth
-########
-
-# change secret key
-SECRET_KEY = "my-secret-key"
 
 
 

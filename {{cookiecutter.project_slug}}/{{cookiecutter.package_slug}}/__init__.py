@@ -9,25 +9,12 @@ App init module
 from flask import Flask, redirect, render_template, jsonify
 import logging
 import logging.handlers
-
-
-from flask_sqlalchemy import SQLAlchemy
-db = SQLAlchemy()
-
-from flask_login import LoginManager
-login_manager = LoginManager()
-
-from flask_cors import CORS
-cors = CORS(resources={r"/api/*": {"origins": "*"}})
-
-from flask_wtf.csrf import CSRFProtect
-csrf = CSRFProtect()
+from .extensions import *
 
 
 def create_app():
     """Initiate flask app"""
     app = Flask(__name__, instance_relative_config=True, static_folder="ui/static", template_folder="ui/templates")
-    app.config.from_object('config')
     app.config.from_pyfile('config.py')
 
     # login
@@ -43,8 +30,8 @@ def create_app():
     login_manager.login_view = "auth.login"
     db.init_app(app)
 
-    # push required elements in app-context
     with app.app_context():
+        # TODO - register your blueprints here
         from .auth.routes import auth_blueprint
         app.register_blueprint(auth_blueprint)
 
@@ -52,6 +39,7 @@ def create_app():
         app.register_blueprint(auth_api_blueprint)
         csrf.exempt(auth_api_blueprint)
 
+        # finally generate tables as per models
         db.create_all()
 
         # register common views
