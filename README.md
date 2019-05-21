@@ -10,23 +10,58 @@
 ## Usage
 
 
-### Method 1 from source
+### Method 1 using remote url
 
-    > git clone git@github.com:rohitchormale/cookiecutter-flask.git
+    > cookiecutter https://github.com/rohitchormale/cookiecutter-flask 
+    project_slug [myproject]: /opt/fooproject (Enter new project name with proper path. If empty 'myproject' will be used with current directory)
+    author[]: John Smith( Enter author name. If empty, empty string will be used)
+    > cd <project-path>
+    > flask run
+
+
+### Method 2 from source
+
+    > git clone https://github.com/rohitchormale/cookiecutter-flask 
     > cookiecutter <absolute-path-to-cloned-repo>
     project_slug [myproject]: /opt/fooproject (Enter new project name with proper path. If empty 'myproject' will be used with current directory)
     author[]: John Smith( Enter author name. If empty, empty string will be used)
     > cd <project-path>
-    > python development.py
+    > flask run
 
-### Method 2 using remote url
 
-    > cd <directory-where-you-want-project>
-    > cookiecutter git@github.com:rohitchormale/cookiecutter-flask.git
-    project_slug [myproject]: /opt/fooproject (Enter new project name with proper path. If empty 'myproject' will be used with current directory)
-    author[]: John Smith( Enter author name. If empty, empty string will be used)
-    > cd <project-path>
-    > python development.py
+## Skeleton Structure
+
+
+    myproject
+    ├── myproject
+    │   ├── auth
+    │   │   ├── controllers.py
+    │   │   ├── forms.py
+    │   │   ├── __init__.py
+    │   │   ├── models.py
+    │   │   └── routes.py
+    │   ├── helpers
+    │   │   ├── controllers.py
+    │   │   ├── __init__.py
+    │   │   └── models.py
+    │   ├── __init__.py
+    │   └── ui
+    │       └── templates
+    │           ├── 404.html
+    │           ├── 500.html
+    │           └── base.html
+    ├── tests
+    │   ├── auth
+    │   │   ├── __init__.py
+    │   │   └── test_controllers.py
+    │   └── __init__.py
+    ├── config.py
+    ├── instance
+    │   └── config.py
+    ├── wsgi.py
+    ├── README.md
+    └── requirements.txt
+
 
 
 ## Bootstrapping
